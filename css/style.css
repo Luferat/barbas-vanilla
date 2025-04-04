@@ -76,7 +76,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .7);
 }
 
 .header-flex-img {
@@ -174,3 +174,4 @@ a:hover {
     text-align: center;
     padding: 10px;
 }
+
