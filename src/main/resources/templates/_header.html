@@ -26,30 +26,29 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100">
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Serviços</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="?local">Onde estamos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="?agenda">Agendamentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/local">Onde estamos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/schedule">Agendamentos</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="?" role="button" data-bs-toggle="dropdown"
                            aria-expanded="false">Sobre</a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item p-2" href="?sobre_barbas">Sobre o Barbas Vanilla</a></li>
-                            <li><a class="dropdown-item p-2" href="?sobre_site">Sobre o Site</a></li>
-                            <li><a class="dropdown-item p-2" href="?sobre_autor">Sobre os Autores</a></li>
+                            <li><a class="dropdown-item p-2" href="/about#project">Sobre o Barbas Vanilla</a></li>
+                            <li><a class="dropdown-item p-2" href="/about#site">Sobre o Site</a></li>
+                            <li><a class="dropdown-item p-2" href="/about#authors">Sobre os Autores</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item p-2" href="?politicas">Políticas de Privacidade</a></li>
-                            <li><a class="dropdown-item p-2" href="?contatos">Faça Contato</a></li>
+                            <li><a class="dropdown-item p-2" href="/privacy">Políticas de Privacidade</a></li>
+                            <li><a class="dropdown-item p-2" href="/contacts">Faça Contato</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item ms-lg-auto">
-                        <a class="nav-link" aria-disabled="true"><img src="img/anonimous_bg_alfa.png" alt="Anônimo"
-                                                                      class="anominimous">Entrar</a>
+                    <li class="nav-item ms-lg-auto" id="userInOut">
+                        <a class="nav-link"><img src="/img/anonimous_bg_alfa.png" alt="Anônimo" class="anominimous">Entrar</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Procurar..." aria-label="Procurar"
-                           style="min-width: 150px !important;">
+                           style="min-width: 150px !important;" name="q">
                     <button class="btn btn-outline-light" type="submit"><i
                             class="fa-solid fa-magnifying-glass fa-fw"></i></button>
                 </form>
