@@ -52,11 +52,14 @@ a:hover {
 
 .navbar-toggler {
     background-color: orange;
+    /* Fundo laranja */
     border-color: black;
+    /* Borda preta */
 }
 
 .navbar-toggler-icon {
     filter: invert(100%);
+    /* Deixa o ícone preto */
 }
 
 .topbanner {
@@ -127,9 +130,10 @@ a:hover {
     }
 }
 
-.card-list {
+.content {
     background-image: url('../img/bg-site.jpg');
 }
+
 
 .card-container {
     display: flex;
