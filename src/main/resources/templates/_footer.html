@@ -5,7 +5,7 @@
         <small class="copyright text-center">${copyright}</small>
         <a href="#top" class="p-1 pt-3 text-light"><i class="fa-solid fa-circle-up fa-fw fa-2x"></i></a>
     </div>
-    <div class="container m-0 p-0 d-flex justify-content-around align-items-center  border-top border-2 mt-1 pb-4">
+    <div class="container m-0 p-0 d-flex justify-content-around align-items-center mt-1 pb-4" style="border-top: 2px dotted grey;">
         <div class="d-flex flex-column pt-4 lh-lg">
             <h5>Redes Sociais</h5>
             <a href="https://facebook.com" target="_blank" class="text-light ps-2"><i class="fa-brands fa-square-facebook fa-fw"></i> Facebook</a>
@@ -42,7 +42,7 @@
         $('#loginDialog')[0].close();
     }
 </script>
-<dialog id="loginDialog" class="border-0 rounded-3">
+<dialog id="loginDialog" class="border-0 rounded-3 bg-dark text-light">
     <form method="post" id="loginForm" class="p-2 pd-0" action="/account/login">
         <h5>Entrar na Conta</h5>
         <#if loginError??>
