@@ -38,11 +38,16 @@ a:hover {
     color: orangered;
 }
 
-.anominimous {
+.anominimous, .logged {
     display: inline-block;
     width: 2rem;
     height: auto;
     padding-right: .5rem;
+}
+
+.logged {
+    width: 2.5rem;
+    border-radius: 50%;
 }
 
 .navbar,
@@ -134,7 +139,6 @@ a:hover {
     background-image: url('../img/bg-site.jpg');
 }
 
-
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -173,4 +177,10 @@ a:hover {
     background-color: #000;
     text-align: center;
     padding: 10px;
+}
+
+span.nav-link { cursor: pointer; }
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
 }

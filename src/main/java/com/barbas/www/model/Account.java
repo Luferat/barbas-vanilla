@@ -1,33 +1,32 @@
 package com.barbas.www.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
-@Data
+@Table(name = "account")
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
+@ToString
 public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String socialId;
-    private String socialPhoto;
-    private String socialName;
-    private String photo;
-    private String tel;
-    private LocalDate birth;
-
     @Column(updatable = false, nullable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
+
+    private String photo;
+    private String tel;
+
+    @Column(nullable = false)
+    private LocalDate birth;
 
     @Column(nullable = false)
     private String name;
@@ -38,14 +37,17 @@ public class Account {
     @Column(unique = true, nullable = false)
     private String cpf;
 
+    @Column(nullable = false)
+    private String password;
+
     @Enumerated(EnumType.STRING)
     private Role role = Role.USER;
 
-    @Lob
-    private String metadata;
-
     @Enumerated(EnumType.STRING)
     private Status status = Status.ON;
+
+    @Lob
+    private String metadata; // Reservado para expansões futuras
 
     public enum Role {
         USER, OPERATOR, EMPLOYE, ANALIST, ADMIN

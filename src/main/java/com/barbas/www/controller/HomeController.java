@@ -1,27 +1,18 @@
 package com.barbas.www.controller;
 
-import com.barbas.www.model.Config;
+import com.barbas.www.config.Config;
+import com.barbas.www.repository.AccountRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-
-import java.util.Map;
 
 @Controller
 @RequiredArgsConstructor
 public class HomeController {
 
     private final Config config;
-
-    @ModelAttribute
-    public void addGlobalAttributes(Model model) {
-        model.addAttribute("logo", config.getLogo());
-        model.addAttribute("copyright", config.getCopyright());
-        model.addAttribute("pageCSS", config.getPageCSS());
-        model.addAttribute("pageJS", config.getPageJS());
-    }
+    private final AccountRepository accountRepository;
 
     @GetMapping("/")
     public String home(Model model) {
@@ -31,7 +22,37 @@ public class HomeController {
 
     @GetMapping("/about")
     public String about(Model model) {
+        // Exemplo de como usar um CSS adicional nesta página / rota
+        model.addAttribute("pageCSS", "/css/about.css"); // Injeta o CSS no template
+
+        // Exemplo de como usar um Javascript adicional nesta página / rota
+        model.addAttribute("pageJS", "/css/about.js"); // Injeta o Javascript no template
+
         model.addAttribute("title", config.getName() + " - Sobre");
         return "about";
+    }
+
+    @GetMapping("/local")
+    public String local(Model model) {
+        model.addAttribute("title", config.getName() + " - Onde Estamos");
+        return "local";
+    }
+
+    @GetMapping("/schedule")
+    public String schedule(Model model) {
+        model.addAttribute("title", config.getName() + " - Agendamentos");
+        return "schedule";
+    }
+
+    @GetMapping("/privacy")
+    public String privacy(Model model) {
+        model.addAttribute("title", config.getName() + " - Políticas de Privacidade");
+        return "schedule";
+    }
+
+    @GetMapping("/contacts")
+    public String contacts(Model model) {
+        model.addAttribute("title", config.getName() + " - Faça Contato");
+        return "schedule";
     }
 }
