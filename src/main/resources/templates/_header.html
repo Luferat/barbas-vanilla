@@ -37,25 +37,22 @@
                             <li><a class="dropdown-item p-2" href="/about#project">Sobre o Barbas Vanilla</a></li>
                             <li><a class="dropdown-item p-2" href="/about#site">Sobre o Site</a></li>
                             <li><a class="dropdown-item p-2" href="/about#authors">Sobre os Autores</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item p-2" href="/privacy">Políticas de Privacidade</a></li>
                             <li><a class="dropdown-item p-2" href="/contacts">Faça Contato</a></li>
                         </ul>
                     </li>
                     <li class="nav-item ms-lg-auto" id="userInOut">
                         <#if loggedUser??>
-                        <a href="/account/profile" class="nav-link">
-                            <img src="${loggedUser.photo}" alt="${loggedUser.name}" class="logged">
-                            ${loggedUser.name}
-                        </a>
+                            <a href="/account/profile" class="nav-link">
+                                <img src="${loggedUser.photo}" alt="${loggedUser.name}" class="logged">
+                                ${loggedUser.firstName}
+                            </a>
                         <#else>
-                        <span class="nav-link">
-    <img src="/img/anonimous_bg_alfa.png" alt="Anônimo" class="anominimous">Entrar
-</span>
-                    </#if>
-
+                            <span class="nav-link">
+                                <img src="/img/anonimous_bg_alfa.png" alt="Anônimo" class="anominimous">Entrar
+                            </span>
+                        </#if>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
